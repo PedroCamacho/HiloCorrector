@@ -1,3 +1,4 @@
+package tarea2;
 import java.util.Scanner;
 
 class Palabra {
