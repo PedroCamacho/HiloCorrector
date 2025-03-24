@@ -11,15 +11,15 @@ public class Posicion {
 		this.s = s;
 	}
 
-	public int getPosicion() {
+	public synchronized int getPosicion() {
 		int resultado=0;
-		try {
-			s.acquire();
+//		try {
+//			s.acquire();
 			resultado = posicion;
-			s.release();
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
+//			s.release();
+//		} catch (InterruptedException e) {
+//			e.printStackTrace();
+//		}
 		return resultado;
 	}
 
